@@ -1,4 +1,8 @@
 export interface Film {
-  firstname : string
-  lastname : string
+  id : number
+  titre : string
+  duree : number
+  resume : string
+  version : string
+  categorie : string
 }
