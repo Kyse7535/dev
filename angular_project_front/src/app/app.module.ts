@@ -7,12 +7,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { AccueilComponent } from './accueil/accueil.component';
 import { FilmComponent } from './film/film.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AccueilComponent,
-    FilmComponent
+    FilmComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
