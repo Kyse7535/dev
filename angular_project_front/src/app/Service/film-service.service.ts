@@ -122,6 +122,19 @@ export class FilmServiceService {
     return this.lesFilms.find(film => film.id === id);
   }
 
+  public modifyFilm(id : number, film:Film){
+    console.log("id " + id)
+
+    const index = this.lesFilms.findIndex(film => film.id === id)
+    console.log("index " + index)
+    this.lesFilms[index].id = film.id
+    this.lesFilms[index].titre = film.titre
+    this.lesFilms[index].duree = film.duree
+    this.lesFilms[index].resume = film.resume
+    this.lesFilms[index].version = film.version
+    this.lesFilms[index].categorie = film.categorie
+  }
+
   public removeFilm(id : number): void {
     const index: number = this.lesFilms.findIndex(film => film.id === id);
     this.lesFilms.splice(index, 1);

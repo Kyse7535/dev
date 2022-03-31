@@ -10,6 +10,10 @@ import { FilmComponent } from './film/film.component';
 import { MenuComponent } from './menu/menu.component';
 import { LesFilmsComponent } from './les-films/les-films.component';
 import { EditFilmComponent } from './edit-film/edit-film.component';
+import {MatCardModule} from "@angular/material/card";
+import {MatDividerModule} from "@angular/material/divider";
+import {MatProgressBarModule} from "@angular/material/progress-bar";
+import { NewFilmComponent } from './new-film/new-film.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +23,16 @@ import { EditFilmComponent } from './edit-film/edit-film.component';
     MenuComponent,
     LesFilmsComponent,
     EditFilmComponent,
+    NewFilmComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSliderModule,
+    MatCardModule,
+    MatDividerModule,
+    MatProgressBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

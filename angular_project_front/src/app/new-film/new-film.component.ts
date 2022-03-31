@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import {Film} from "../entity/Film";
 import {FilmServiceService} from "../Service/film-service.service";
 import {ActivatedRoute} from "@angular/router";
 import {Location} from "@angular/common";
-import {CategorieServiceService} from "../Service/categorie-service.service";
+import {Film} from "../entity/Film";
 import {Categorie} from "../entity/Categorie";
+import {CategorieServiceService} from "../Service/categorie-service.service";
 
 @Component({
-  selector: 'app-edit-film',
-  templateUrl: './edit-film.component.html',
-  styleUrls: ['./edit-film.component.scss']
+  selector: 'app-new-film',
+  templateUrl: './new-film.component.html',
+  styleUrls: ['./new-film.component.scss']
 })
-export class EditFilmComponent implements OnInit {
+export class NewFilmComponent implements OnInit {
 
   listeCategories: Array<Categorie> = [];
 
@@ -29,18 +29,18 @@ export class EditFilmComponent implements OnInit {
               private route: ActivatedRoute,
               private location: Location) { }
 
-
-  private set(titre: string, duree: number, resume: string, version: string, categorie: string): void {
-    this.film.titre = titre,
-    this.film.duree = duree,
-    this.film.resume = resume,
-    this.film.version = version,
-    this.film.categorie = categorie
-  }
-
   goBack(): void {
     this.location.back()
   }
+
+  private set(titre: string, duree: number, resume: string, version: string, categorie: string): void {
+    this.film.titre = titre,
+      this.film.duree = duree,
+      this.film.resume = resume,
+      this.film.version = version,
+      this.film.categorie = categorie
+  }
+
 
   create(titre: string, duree: string, resume: string, version: string, categorie: string): void {
     this.set(titre, Number(duree), resume, version, categorie)
@@ -48,29 +48,7 @@ export class EditFilmComponent implements OnInit {
     this.goBack()
   }
 
-  update(titre: string, duree: string, resume: string, version: string, categorie: string, id: number): void {
-   if (id !== undefined) {
-     this.set(titre, Number(duree), resume, version, categorie)
-     this.filmService.modifyFilm(id, this.film)
-     this.goBack()
-    }
-  }
-
-  delete(id : number){
-    this.filmService.removeFilm(id)
-    this.goBack()
-  }
-
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id');
-
-    if(id!==null) {
-      const film = this.filmService.getFilmById(Number(id));
-
-      if (film !== undefined)
-        this.film = film
-    }
-
     this.listeCategories = this.categorieService.getCategories();
   }
 

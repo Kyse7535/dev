@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Categorie} from "../entity/Categorie";
+import {Film} from "../entity/Film";
 
 @Injectable({
   providedIn: 'root'
@@ -16,4 +17,8 @@ export class CategorieServiceService {
   ];
 
   constructor() { }
+
+  public getCategories(): Array<Categorie> {
+    return this.lesCategories;
+  }
 }

@@ -16,13 +16,9 @@ export class LesFilmsComponent implements OnInit {
               private route: ActivatedRoute,
               private location: Location) { }
 
-  goBack(): void {
-    this.location.back();
-  }
 
   delete(id : number){
     this.filmService.removeFilm(id)
-    this.goBack()
   }
 
   ngOnInit(): void {

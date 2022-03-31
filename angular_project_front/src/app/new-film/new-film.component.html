@@ -1,38 +1,36 @@
 <div class="mt-5">
-  <h1 class="fw-bold">Modifier film</h1>
-  <form action="" method="post" *ngIf="film!==undefined">
+  <h1 class="fw-bold">Nouveau film</h1>
+  <form action="" method="post">
     <div class="input-group mb-3">
       <span class="input-group-text" id="inputGroup-sizing-default">Titre</span>
-      <input #titre type="text" class="form-control" value="{{film.titre}}" aria-label="Sizing example input"
+      <input #titre type="text" class="form-control" aria-label="Sizing example input"
              aria-describedby="inputGroup-sizing-default">
     </div>
     <div class="input-group mb-3">
       <span class="input-group-text" id="inputGroup-sizing-default-1">Durée</span>
-      <input #duree type="text" class="form-control" value="{{film.duree}}" aria-label="Sizing example input"
+      <input #duree type="text" class="form-control" aria-label="Sizing example input"
              aria-describedby="inputGroup-sizing-default-1">
     </div>
     <div class="input-group mb-3">
       <span class="input-group-text" id="inputGroup-sizing-default-2">Résumé</span>
-      <input #resume type="text" class="form-control" value="{{film.resume}}" aria-label="Sizing example input"
+      <input #resume type="text" class="form-control" aria-label="Sizing example input"
              aria-describedby="inputGroup-sizing-default-2">
     </div>
     <div class="input-group mb-3">
       <span class="input-group-text" id="inputGroup-sizing-default-3">Version</span>
-      <input #version type="text" class="form-control" value="{{film.version}}" aria-label="Sizing example input"
+      <input #version type="text" class="form-control" aria-label="Sizing example input"
              aria-describedby="inputGroup-sizing-default-3">
     </div>
     <div class="input-group mb-3">
       <span class="input-group-text" id="inputGroup-sizing-default-4">Catégorie</span>
       <select #categorie class="form-select" aria-label="Default select example" aria-label="Sizing example input"
               aria-describedby="inputGroup-sizing-default-4">
-        <option selected>{{film.categorie}}</option>
         <option  *ngFor="let categorie of listeCategories" value="{{categorie.nomCategorie}}">{{categorie.nomCategorie}}</option>
       </select>
     </div>
-
-    <input class="btn btn-success" type="button" value="Valider"
-           (click)="update(titre.value, duree.value, resume.value, version.value, categorie.value, film.id)">
-    <input class="btn btn-danger m-3" type="button" value="Supprimer" (click)="delete(film.id)">
-    <input class="btn btn-dark m-3" type="button" value="Annuler" (click)="goBack()">
+    <input class="btn btn-success m-2" type="button" value="Créer"
+           (click)="create(titre.value, duree.value, resume.value, version.value, categorie.value)">
+    <input class="btn btn-danger m-3" type="reset" value="Annuler">
+    <input class="btn btn-dark m-3" type="button" value="Retour" (click)="goBack()">
   </form>
 </div>

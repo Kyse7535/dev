@@ -15,7 +15,10 @@ Création des composants film et accueil :
 `ng generate service Service/FilmService`
 
 ## Question 6
-Création d'un composant pour afficher la liste des films et d'un autre pour gérer
-la modification ou l'ajout. La suppression reste une fonction interne.
+Création d'un composant pour afficher la liste des films, et de deux autre pour gérer
+la modification et l'ajout. La suppression reste une fonction interne.
 
-`ng generate component les-films` `ng generate component edit-film`
+`ng generate component les-films` `ng generate component edit-film` `ng generate component new-film`
+
+## Question 7
+On a utilisé un composant bootstrap pour gérer la liste déroulante des catégories.
