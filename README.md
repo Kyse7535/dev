@@ -7,3 +7,6 @@ Création des composants film et accueil :
 
 ## Question 3 
 `npm install` `npm install bootstrap`
+
+## Question 4
+`ng generate service Service/CategorieService`, la classe categorie à été créer à la main
