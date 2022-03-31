@@ -2,15 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import {Film} from "../entity/Film";
 import {FilmServiceService} from "../Service/film-service.service";
 import {ActivatedRoute} from "@angular/router";
-import {Location} from '@angular/common';
+import {Location} from "@angular/common";
 
 @Component({
-  selector: 'app-film',
-  templateUrl: './film.component.html',
-  styleUrls: ['./film.component.scss']
+  selector: 'app-les-films',
+  templateUrl: './les-films.component.html',
+  styleUrls: ['./les-films.component.scss']
 })
-export class FilmComponent implements OnInit {
-  film: Film | undefined = undefined;
+export class LesFilmsComponent implements OnInit {
+  listeFilms: Array<Film> = [];
 
   constructor(public filmService : FilmServiceService,
               private route: ActivatedRoute,
@@ -26,7 +26,7 @@ export class FilmComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id');
-    this.film = this.filmService.getFilmById(Number(id));
+    this.listeFilms = this.filmService.getFilms();
   }
+
 }

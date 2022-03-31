@@ -109,7 +109,7 @@ export class FilmServiceService {
   constructor() {
   }
 
-  public getCours(): Array<Film> {
+  public getFilms(): Array<Film> {
     return this.lesFilms;
   }
 
@@ -122,8 +122,8 @@ export class FilmServiceService {
     return this.lesFilms.find(film => film.id === id);
   }
 
-  public removeFilm(film: Film): void {
-    const index: number = this.lesFilms.indexOf(film);
+  public removeFilm(id : number): void {
+    const index: number = this.lesFilms.findIndex(film => film.id === id);
     this.lesFilms.splice(index, 1);
   }
 

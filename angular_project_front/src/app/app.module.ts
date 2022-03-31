@@ -8,13 +8,17 @@ import { MatSliderModule } from '@angular/material/slider';
 import { AccueilComponent } from './accueil/accueil.component';
 import { FilmComponent } from './film/film.component';
 import { MenuComponent } from './menu/menu.component';
+import { LesFilmsComponent } from './les-films/les-films.component';
+import { EditFilmComponent } from './edit-film/edit-film.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AccueilComponent,
     FilmComponent,
-    MenuComponent
+    MenuComponent,
+    LesFilmsComponent,
+    EditFilmComponent,
   ],
   imports: [
     BrowserModule,
