@@ -10,3 +10,6 @@ Création des composants film et accueil :
 
 ## Question 4
 `ng generate service Service/CategorieService`, la classe categorie à été créer à la main
+
+## Question 5
+`ng generate service Service/FilmService`

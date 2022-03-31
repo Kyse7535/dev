@@ -6,7 +6,7 @@ import {Categorie} from "../entity/Categorie";
 })
 export class CategorieServiceService {
 
-  private categories : Array<Categorie> = [
+  private lesCategories : Array<Categorie> = [
     {nomCategorie : "Comédie"},
     {nomCategorie : "Drame"},
     {nomCategorie : "Aventure"},
