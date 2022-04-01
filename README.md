@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Question 1
 Création d'une entité film pour contenir les attribut de l'interface Film.
 
@@ -22,3 +23,13 @@ la modification et l'ajout. La suppression reste une fonction interne.
 
 ## Question 7
 On a utilisé un composant bootstrap pour gérer la liste déroulante des catégories.
+
+
+## Question 8
+1.`symfony composer require api`
+2. `symfony console req symfony/maker-bundle --dev`
+3. `symfony console make:entity`
+4. `symfony console d:d:c`
+5. `symfony console make:migration`
+6. `symfony console d:m:m`
+>>>>>>> 514da842796cf475a05eac03e249d5692262ba55
