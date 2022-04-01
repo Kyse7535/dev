@@ -4,6 +4,7 @@ namespace App\DataFixtures;
 
 use App\Entity\Categorie;
 use App\Entity\Film;
+use App\Entity\User;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use App\Entity\Version;
@@ -60,6 +61,11 @@ class AppFixtures extends Fixture
         $manager->persist($comedie);
         // $manager->persist($product);
 
+        $user = new User();
+        $user->setPassword("tada")
+            ->setUsername("gege");
+
+        $manager->persist($user);
         $manager->flush();
     }
 }
