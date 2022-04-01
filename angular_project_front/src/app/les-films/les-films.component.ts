@@ -3,6 +3,7 @@ import {Film} from "../entity/Film";
 import {FilmServiceService} from "../Service/film-service.service";
 import {ActivatedRoute} from "@angular/router";
 import {Location} from "@angular/common";
+import {FilmWebServiceService} from "../Service/film-web-service.service";
 
 @Component({
   selector: 'app-les-films',
@@ -13,6 +14,7 @@ export class LesFilmsComponent implements OnInit {
   listeFilms: Array<Film> = [];
 
   constructor(public filmService : FilmServiceService,
+              private filmWebService: FilmWebServiceService,
               private route: ActivatedRoute,
               private location: Location) { }
 
@@ -21,8 +23,9 @@ export class LesFilmsComponent implements OnInit {
     this.filmService.removeFilm(id)
   }
 
-  ngOnInit(): void {
-    this.listeFilms = this.filmService.getFilms();
+   ngOnInit() {
+    const observable = this.filmWebService.getFilms();
+    observable.subscribe((data: Film[]) => this.listeFilms = data)
   }
 
 }

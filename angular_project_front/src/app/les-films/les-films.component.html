@@ -1,23 +1,29 @@
 
 <h1 class="mb-3 mt-4 text-center fw-bold">Liste des films</h1>
-<div class="text-center">
-<a href="#" class="card-link btn btn-primary m-5" routerLink="/new-film">Ajouter un nouveau film</a>
-</div>
+
 
 <div class="row">
-  <div *ngFor="let film of listeFilms" class="col-sm-4">
-    <div class="card" style="width: 22rem;">
-      <div class="card-header badge badge-primary">{{film.id}}</div>
-      <div class="card-body">
-        <h2 class="card-title">{{film.titre}}</h2>
-        <h3 class="card-subtitle mb-2 text-muted">Durée : {{film.duree}} min</h3>
-        <p>Description : </p>
-        <p class="card-text">{{film.resume}}</p>
-        <a href="#" class="card-link btn btn-primary" routerLink="/film/{{film.id}}">Détails</a>
-        <a href="#" class="card-link btn btn-success" routerLink="/edit-film/{{film.id}}">Modifier</a>
-        <a href="#" class="card-link btn btn-danger" routerLink="/les-films" (click)="delete(film.id)">Supprimer</a>
-      </div>
-    </div>
-    <br>
+  <div class="col-12 text-center" *ngIf="listeFilms.length === 0; else content">
+    <h1>Chargement....</h1>
   </div>
+  <ng-template #content>
+    <div class="text-center">
+      <a href="#" class="card-link btn btn-primary m-5" routerLink="/new-film">Ajouter un nouveau film</a>
+    </div>
+    <div  *ngFor="let film of listeFilms" class="col-sm-4">
+      <div class="card" style="width: 22rem;">
+        <div class="card-header badge badge-primary">{{film.id}}</div>
+        <div class="card-body">
+          <h2 class="card-title">{{film.titre}}</h2>
+          <h3 class="card-subtitle mb-2 text-muted">Durée : {{film.duree}} min</h3>
+          <p>Description : </p>
+          <p class="card-text">{{film.resume}}</p>
+          <a href="#" class="card-link btn btn-primary" routerLink="/film/{{film.id}}">Détails</a>
+          <a href="#" class="card-link btn btn-success" routerLink="/edit-film/{{film.id}}">Modifier</a>
+          <a href="#" class="card-link btn btn-danger" routerLink="/les-films" (click)="delete(film.id)">Supprimer</a>
+        </div>
+      </div>
+      <br>
+    </div>
+  </ng-template>
 </div>
