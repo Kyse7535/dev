@@ -33,3 +33,7 @@ On a utilisé un composant bootstrap pour gérer la liste déroulante des catég
 5. `symfony console make:migration`
 6. `symfony console d:m:m`
 >>>>>>> 514da842796cf475a05eac03e249d5692262ba55
+> 
+## Question 9
+
+1. `ng g s Service/FilmWebService`
