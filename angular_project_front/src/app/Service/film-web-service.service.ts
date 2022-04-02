@@ -1,13 +1,19 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import {HttpClient, HttpHeaders, HttpParams, HttpRequest, HttpResponse} from '@angular/common/http';
 import {map, Observable, throwError} from 'rxjs';
 import {Film} from "../entity/Film";
 import {Categorie} from "../entity/Categorie";
 import {Version} from "../entity/Version";
+import {User} from "../entity/user";
 
 
 interface apiResponse {
   'hydra:member': Array<any>
+}
+
+interface userResponse {
+  'message': string,
+  status: number
 }
 
 @Injectable({
@@ -23,6 +29,23 @@ export class FilmWebServiceService {
   constructor(private http: HttpClient) {
 
   }
+
+
+
+  register(username : string, password : string) : Observable<Boolean>{
+    const userData = {
+      username : username,
+      password : password
+    };
+    return new Observable<Boolean>((observer) =>{
+      this.http.post('http://localhost:6005/register', userData).subscribe(result =>{
+      observer.next(true);
+      observer.complete();
+      });
+    });
+  }
+
+
   getFilms(): Observable<Array<Film>> {
     return this.http.get<apiResponse>(this.apiFilms,
       {responseType: 'json', observe: 'body'})
@@ -30,8 +53,6 @@ export class FilmWebServiceService {
         return data['hydra:member']
       }))
   }
-
-
 
   getCategories(): Observable<Array<Categorie>>{
     return this.http.get<apiResponse>( this.apiCategories,
@@ -54,15 +75,6 @@ export class FilmWebServiceService {
         return data['hydra:member']
       }))
   }
-
-/*
-  public addFilm(film: Film): Observable<boolean> {
-    return this.http.post(this.apiURL,
-      film,
-      {observe: 'response', responseType: 'json'})
-      .pipe(map((response)=>response.status===201))
-  }
-*/
 
   public addFilm(film: Object): Observable<boolean> {
     return this.http.post(this.apiFilms,
