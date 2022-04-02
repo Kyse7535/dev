@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Film} from "../entity/Film";
 import {Categorie} from "../entity/Categorie";
+import {Version} from "../entity/Version";
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,10 @@ import {Categorie} from "../entity/Categorie";
 export class FilmServiceService {
 
   private lesFilms: Array<Film> = [
-    {
+
+  ];
+  /*
+  * {
       id: 1,
       titre: "Game of throne",
       duree: 60,
@@ -103,8 +107,7 @@ export class FilmServiceService {
       resume: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ",
       version: "Version original",
       categorie: "Drame"
-    }
-  ];
+    }*/
 
   constructor() {
   }
@@ -113,10 +116,13 @@ export class FilmServiceService {
     return this.lesFilms;
   }
 
-  public addFilm(titre: string, duree: number, resume : string, version : string, categorie : string): void {
+  /*public addFilm(titre: string, duree: number, resume : string, version : Version, categorie : string): void {
     const newId = Math.max(...this.lesFilms.map(film => film.id)) + 1;
     this.lesFilms.push({id: newId, titre, duree, resume, version, categorie});
   }
+
+  */
+
 
   public getFilmById(id: number): Film | undefined {
     return this.lesFilms.find(film => film.id === id);

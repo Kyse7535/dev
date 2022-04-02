@@ -43,7 +43,8 @@ class Film
     #[Groups("Film")]
     private $resume;
 
-    #[ORM\ManyToMany(targetEntity: Version::class, inversedBy: 'films')]
+    #[ORM\ManyToOne(targetEntity: Version::class, inversedBy: 'films')]
+    #[ORM\JoinColumn(nullable: false)]
     #[Groups("Film")]
     private $version;
 
@@ -99,28 +100,20 @@ class Film
     }
 
     /**
-     * @return Collection<int, Version>
+     * @return string
      */
-    public function getVersion(): Collection
+    public function getVersion(): string
     {
         return $this->version;
     }
 
-    public function addVersion(Version $version): self
+    public function setVersion(Version $version): self
     {
-        if (!$this->version->contains($version)) {
-            $this->version[] = $version;
-        }
+        $this->version = $version;
 
         return $this;
     }
 
-    public function removeVersion(Version $version): self
-    {
-        $this->version->removeElement($version);
-
-        return $this;
-    }
 
     public function getCategorie(): ?Categorie
     {

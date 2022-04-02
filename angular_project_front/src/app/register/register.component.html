@@ -1,0 +1,18 @@
+<div class="w-50 m-auto mt-5">
+  <h1 class="fw-bold mb-3">Inscription</h1>
+  <form>
+    <div class="mb-3">
+      <label for="exampleInputUsername1" class="form-label">Identifiant</label>
+      <input #username type="text" class="form-control" id="exampleInputUsername1" aria-describedby="usernameHelp">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Mot de Passe</label>
+      <input #password type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword2" class="form-label">Confirmer votre mot de Passe</label>
+      <input #confrimPassword type="password" class="form-control" id="exampleInputPassword2">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="getSubscribed(username.value, password.value, confrimPassword.value)">Valider</button>
+  </form>
+</div>
