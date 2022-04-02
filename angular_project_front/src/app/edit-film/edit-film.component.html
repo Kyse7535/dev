@@ -18,15 +18,18 @@
     </div>
     <div class="input-group mb-3">
       <span class="input-group-text" id="inputGroup-sizing-default-3">Version</span>
-      <input #version type="text" class="form-control" value="{{film.version}}" aria-label="Sizing example input"
-             aria-describedby="inputGroup-sizing-default-3">
+      <select #version class="form-select" aria-label="Default select example" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default-4">
+        <option selected value="{{film.version.id}}">{{film.version.type}}</option>
+        <option  *ngFor="let version of listeVersions" value="{{version.id}}">{{version.type}}</option>
+      </select>
     </div>
     <div class="input-group mb-3">
       <span class="input-group-text" id="inputGroup-sizing-default-4">Catégorie</span>
       <select #categorie class="form-select" aria-label="Default select example" aria-label="Sizing example input"
               aria-describedby="inputGroup-sizing-default-4">
-        <option selected>{{film.categorie}}</option>
-        <option  *ngFor="let categorie of listeCategories" value="{{categorie.nomCategorie}}">{{categorie.nomCategorie}}</option>
+        <option selected value="{{film.categorie.id}}">{{film.categorie.nom}}</option>
+        <option  *ngFor="let categorie of listeCategories" value="{{categorie.id}}">{{categorie.nom}}</option>
       </select>
     </div>
 

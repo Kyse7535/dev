@@ -28,9 +28,6 @@ class Version
     #[Groups("version")]
     private $type;
 
-    #[ORM\ManyToMany(targetEntity: Film::class, mappedBy: 'version')]
-    #[Groups("version")]
-    private $films;
 
     public function __construct()
     {
@@ -54,30 +51,4 @@ class Version
         return $this;
     }
 
-    /**
-     * @return Collection<int, Film>
-     */
-    public function getFilms(): Collection
-    {
-        return $this->films;
-    }
-
-    public function addFilm(Film $film): self
-    {
-        if (!$this->films->contains($film)) {
-            $this->films[] = $film;
-            $film->addVersion($this);
-        }
-
-        return $this;
-    }
-
-    public function removeFilm(Film $film): self
-    {
-        if ($this->films->removeElement($film)) {
-            $film->removeVersion($this);
-        }
-
-        return $this;
-    }
 }

@@ -39,16 +39,12 @@ class AppFixtures extends Fixture
             $film->setDuree(150);
             $film->setResume("mon resume n°" . $i);
             if ($i %2 == 0) {
-                $film->addVersion($version);
-                $version->addFilm($film);
-                $film->setCategorie($romance);
-                $romance->addFilm($film);
+                $film->setVersion($version);
+                $film->setCategorie($fiction);
             }
             else {
+                $film->setVersion($version2);
                 $film->setCategorie($comedie);
-                $comedie->addFilm($film);
-                $film->addVersion($version2);
-                $version2->addFilm($film);
             }
             $manager->persist($film);
         }

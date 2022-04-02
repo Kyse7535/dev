@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {UserService} from "../Service/user.service";
 import {User} from "../entity/user";
+import {UserService} from "../Service/user.service";
+
 
 @Component({
   selector: 'app-login',

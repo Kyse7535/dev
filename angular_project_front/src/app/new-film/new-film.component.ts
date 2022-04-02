@@ -5,6 +5,8 @@ import {Location} from "@angular/common";
 import {Film} from "../entity/Film";
 import {Categorie} from "../entity/Categorie";
 import {CategorieServiceService} from "../Service/categorie-service.service";
+import {FilmWebServiceService} from "../Service/film-web-service.service";
+import {Version} from "../entity/Version";
 
 @Component({
   selector: 'app-new-film',
@@ -14,17 +16,19 @@ import {CategorieServiceService} from "../Service/categorie-service.service";
 export class NewFilmComponent implements OnInit {
 
   listeCategories: Array<Categorie> = [];
+  listeVersions: Array<Version> = [];
 
   film : Film = {
     id : Number(),
     titre : "",
     duree : Number(),
     resume : "",
-    version : "",
-    categorie : ""
+    version : {id: Number(), type: "allo"},
+    categorie : {id: Number(), nom: ""}
   }
 
   constructor(public filmService : FilmServiceService,
+              public filmWebService : FilmWebServiceService,
               public  categorieService : CategorieServiceService,
               private route: ActivatedRoute,
               private location: Location) { }
@@ -36,20 +40,25 @@ export class NewFilmComponent implements OnInit {
   private set(titre: string, duree: number, resume: string, version: string, categorie: string): void {
     this.film.titre = titre,
       this.film.duree = duree,
-      this.film.resume = resume,
-      this.film.version = version,
-      this.film.categorie = categorie
+      this.film.resume = resume
+      //this.film.version = version,
+      //this.film.categorie = categorie
   }
-
 
   create(titre: string, duree: string, resume: string, version: string, categorie: string): void {
     this.set(titre, Number(duree), resume, version, categorie)
-    this.filmService.addFilm(titre, Number(duree), resume, version, categorie)
-    this.goBack()
+    this.filmWebService.addFilm({titre, version: "/api/versions/"+ version, duree: this.film.duree, resume,
+    categorie: "/api/categories/" + categorie})
+      .subscribe((r)=>this.goBack())
   }
 
   ngOnInit(): void {
-    this.listeCategories = this.categorieService.getCategories();
+    const observable = this.filmWebService.getCategories();
+    observable.subscribe((data: Categorie[]) => this.listeCategories = data)
+
+    const observableVersion = this.filmWebService.getVersions();
+    observableVersion.subscribe((data: Version[]) => this.listeVersions = data)
+    //this.listeCategories = this.categorieService.getCategories();
   }
 
 }

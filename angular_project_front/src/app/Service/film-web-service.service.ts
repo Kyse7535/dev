@@ -47,6 +47,13 @@ export class FilmWebServiceService {
         return data['hydra:member']
       }))
   }
+  getFilmsByCategorie(id: number): Observable<Array<Film>>{
+    return this.http.get<apiResponse>( this.apiFilms + "?categorie=/api/categories/" + id,
+      {responseType: 'json', observe: 'body'})
+      .pipe(map((data) => {
+        return data['hydra:member']
+      }))
+  }
 
 /*
   public addFilm(film: Film): Observable<boolean> {
@@ -63,6 +70,7 @@ export class FilmWebServiceService {
       {observe: 'response', responseType: 'json'})
       .pipe(map((response)=>response.status===201))
   }
+
 
   public getFilmById(id: number): Observable<Film> {
     return this.http.get<Film>(this.apiFilms+"/"+id.toString(),

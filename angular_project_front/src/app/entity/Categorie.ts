@@ -1,3 +1,4 @@
 export interface Categorie {
-  nomCategorie : string
+  id: number,
+  nom : string
 }

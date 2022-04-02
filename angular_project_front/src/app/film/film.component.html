@@ -21,18 +21,17 @@
 
     <div class="input-group mb-3">
       <span class="input-group-text fw-bold" id="inputGroup-sizing-default-3">Version</span>
-      <input #version type="text" class="form-control" value="{{film.version}}" aria-label="Sizing example input"
+      <input #version type="text" class="form-control" value="{{film.version.type}}" aria-label="Sizing example input"
              aria-describedby="inputGroup-sizing-default-3" disabled>
     </div>
 
     <div class="input-group mb-3">
       <span class="input-group-text fw-bold" id="inputGroup-sizing-default-4">Catégorie</span>
-      <input #categorie type="text" class="form-control" value="{{film.categorie}}" aria-label="Sizing example input"
+      <input #categorie type="text" class="form-control" value="{{film.categorie.nom}}" aria-label="Sizing example input"
              aria-describedby="inputGroup-sizing-default-4" disabled>
     </div>
 
     <input class="btn btn-dark m-3" type="button" value="Retour" (click)="goBack()">
-    <input class="btn btn-danger m-3" type="button" value="Delete" (click)="delete(film.id)">
   </form>
 </div>
 

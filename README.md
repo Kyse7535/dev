@@ -36,5 +36,9 @@ On a utilisé un composant bootstrap pour gérer la liste déroulante des catég
 ## Question 9
 `ng generate service Service/FilmWebService`
 
+## Question 10
+
+
+
 
 

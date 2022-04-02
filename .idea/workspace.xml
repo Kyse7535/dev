@@ -1,57 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="d6e392aa-e6ca-4dd1-a139-617c8f8bbb77" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/bin/console" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/composer.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config/bundles.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config/packages/api_platform.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config/packages/cache.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config/packages/doctrine.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config/packages/doctrine_migrations.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config/packages/framework.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config/packages/nelmio_cors.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config/packages/routing.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config/packages/security.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config/packages/twig.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config/packages/validator.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config/preload.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config/routes.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config/routes/api_platform.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config/routes/framework.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config/services.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/migrations/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/migrations/Version20220331125507.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/migrations/Version20220331154945.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/public/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/Controller/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/Controller/FilmController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/Controller/LoginController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/DataFixtures/AppFixtures.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/Entity/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/Entity/Categorie.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/Entity/Film.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/Entity/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/Entity/Version.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/Kernel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/Repository/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/Repository/CategorieRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/Repository/FilmRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/Repository/UserRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/Repository/VersionRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/symfony.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/templates/base.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/templates/film/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/templates/login/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular_project_front/src/app/Service/film-web-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular_project_front/src/app/Service/film-web-service.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular_project_front/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular_project_front/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular_project_front/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular_project_front/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular_project_front/src/app/edit-film/edit-film.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular_project_front/src/app/edit-film/edit-film.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular_project_front/src/app/edit-film/edit-film.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular_project_front/src/app/edit-film/edit-film.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular_project_front/src/app/entity/Categorie.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular_project_front/src/app/entity/Categorie.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular_project_front/src/app/entity/Film.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular_project_front/src/app/entity/Film.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular_project_front/src/app/entity/Version.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular_project_front/src/app/entity/Version.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular_project_front/src/app/film/film.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular_project_front/src/app/film/film.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular_project_front/src/app/film/film.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular_project_front/src/app/film/film.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular_project_front/src/app/les-films/les-films.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular_project_front/src/app/les-films/les-films.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular_project_front/src/app/les-films/les-films.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular_project_front/src/app/les-films/les-films.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular_project_front/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular_project_front/src/app/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular_project_front/src/app/new-film/new-film.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular_project_front/src/app/new-film/new-film.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular_project_front/src/app/new-film/new-film.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular_project_front/src/app/new-film/new-film.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/DataFixtures/AppFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Entity/Film.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Entity/Film.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Entity/Version.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Entity/Version.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -60,17 +45,33 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="27Bvo1cJFouDRyk6rHrgV78Wcqt" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/angular_project_front/src/app/entity" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/angular_project_front/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/angular_project_front/src/app/entity" />
+      <recent name="$PROJECT_DIR$/angular_project_front/src/app/Service" />
+      <recent name="$PROJECT_DIR$/angular_project_front/src/app" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -81,10 +82,25 @@
       <option name="presentableId" value="Default" />
       <updated>1648806464755</updated>
       <workItem from="1648806466050" duration="250000" />
+      <workItem from="1648899585410" duration="22759000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

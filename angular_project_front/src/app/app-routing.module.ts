@@ -6,6 +6,8 @@ import {FilmComponent} from "./film/film.component";
 import {LesFilmsComponent} from "./les-films/les-films.component";
 import {EditFilmComponent} from "./edit-film/edit-film.component";
 import {NewFilmComponent} from "./new-film/new-film.component";
+import {LoginComponent} from "./login/login.component";
+import {RegisterComponent} from "./register/register.component";
 
 const routes: Routes = [
 
@@ -15,7 +17,8 @@ const routes: Routes = [
   {path: 'edit-film/:id', component: EditFilmComponent},
   {path: 'film/:id', component: FilmComponent},
   {path: 'new-film', component: NewFilmComponent},
-
+  {path: 'login', component: LoginComponent},
+  {path: 'register', component: RegisterComponent},
 ];
 
 @NgModule({

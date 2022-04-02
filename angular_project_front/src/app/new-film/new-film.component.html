@@ -4,28 +4,31 @@
     <div class="input-group mb-3">
       <span class="input-group-text" id="inputGroup-sizing-default">Titre</span>
       <input #titre type="text" class="form-control" aria-label="Sizing example input"
-             aria-describedby="inputGroup-sizing-default">
+             aria-describedby="inputGroup-sizing-default" required>
     </div>
     <div class="input-group mb-3">
       <span class="input-group-text" id="inputGroup-sizing-default-1">Durée</span>
-      <input #duree type="text" class="form-control" aria-label="Sizing example input"
-             aria-describedby="inputGroup-sizing-default-1">
+      <input #duree type="number" class="form-control" aria-label="Sizing example input"
+             aria-describedby="inputGroup-sizing-default-1" required>
     </div>
     <div class="input-group mb-3">
       <span class="input-group-text" id="inputGroup-sizing-default-2">Résumé</span>
       <input #resume type="text" class="form-control" aria-label="Sizing example input"
-             aria-describedby="inputGroup-sizing-default-2">
+             aria-describedby="inputGroup-sizing-default-2" required>
     </div>
     <div class="input-group mb-3">
       <span class="input-group-text" id="inputGroup-sizing-default-3">Version</span>
-      <input #version type="text" class="form-control" aria-label="Sizing example input"
-             aria-describedby="inputGroup-sizing-default-3">
+
+      <select #version class="form-select" aria-label="Default select example" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default-4">
+        <option  *ngFor="let version of listeVersions" value="{{version.id}}">{{version.type}}</option>
+      </select>
     </div>
     <div class="input-group mb-3">
       <span class="input-group-text" id="inputGroup-sizing-default-4">Catégorie</span>
       <select #categorie class="form-select" aria-label="Default select example" aria-label="Sizing example input"
               aria-describedby="inputGroup-sizing-default-4">
-        <option  *ngFor="let categorie of listeCategories" value="{{categorie.nomCategorie}}">{{categorie.nomCategorie}}</option>
+        <option  *ngFor="let categorie of listeCategories" value="{{categorie.id}}">{{categorie.nom}}</option>
       </select>
     </div>
     <input class="btn btn-success m-2" type="button" value="Créer"

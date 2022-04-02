@@ -55,7 +55,6 @@ class Film
 
     public function __construct()
     {
-        $this->version = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -100,9 +99,9 @@ class Film
     }
 
     /**
-     * @return string
+     * @return Version
      */
-    public function getVersion(): string
+    public function getVersion(): Version
     {
         return $this->version;
     }
